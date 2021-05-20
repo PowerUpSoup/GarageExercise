@@ -57,4 +57,13 @@ public class Car extends Vehicle {
 		this.dateOfCreation = dateOfCreation;
 	}
 
+	@Override
+	public String toString() {
+		return "Car [manufacturer=" + manufacturer + ", model=" + model + ", dateOfCreation=" + dateOfCreation
+				+ ", getTerrain()=" + getTerrain() + ", getTopSpeed()=" + getTopSpeed() + ", getMaxPassengers()="
+				+ getMaxPassengers() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+
+	
 }

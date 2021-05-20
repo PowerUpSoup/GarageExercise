@@ -1,6 +1,6 @@
 package com.qa.javabeginner.oop.abstraction;
 
-public abstract class Vehicle {
+public abstract class Vehicle extends Garage {
 	private String terrain;
 	private int topSpeed;
 	private int maxPassengers;
@@ -15,7 +15,7 @@ public abstract class Vehicle {
 	
 	public abstract void applyBreaks();
 	
-	public abstract void boardPassengers();
+	public abstract void boardPassengers();  
 
 	public String getTerrain() {
 		return terrain;

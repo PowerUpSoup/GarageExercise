@@ -1,11 +1,19 @@
 package com.qa.javabeginner.oop.abstraction;
 
-public class Hovercraft extends Vehicle{
-	
-	private boolean isPopped; 
+public class Hovercraft extends Vehicle {
+
+	private boolean isPopped;
 	private boolean engaged;
 	private boolean onWater;
-	
+
+	public Hovercraft(String terrain, int topSpeed, int maxPassengers, boolean isPopped, boolean engaged,
+			boolean onWater) {
+		super(terrain, topSpeed, maxPassengers);
+		this.engaged = engaged;
+		this.isPopped = isPopped;
+		this.onWater = onWater;
+	}
+
 	@Override
 	public void accelerate() {
 		System.out.println("getting going");
@@ -15,7 +23,7 @@ public class Hovercraft extends Vehicle{
 	@Override
 	public void applyBreaks() {
 		System.out.println("and tedious!");
-		
+
 	}
 
 	@Override
@@ -47,9 +55,12 @@ public class Hovercraft extends Vehicle{
 		this.onWater = onWater;
 	}
 
-	public Hovercraft(String terrain, int topSpeed, int maxPassengers) {
-		super(terrain, topSpeed, maxPassengers);
-		// TODO Auto-generated constructor stub
+	@Override
+	public String toString() {
+		return "Hovercraft [isPopped=" + isPopped + ", engaged=" + engaged + ", onWater=" + onWater + ", getTerrain()="
+				+ getTerrain() + ", getTopSpeed()=" + getTopSpeed() + ", getMaxPassengers()=" + getMaxPassengers()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
 	}
 
 }
