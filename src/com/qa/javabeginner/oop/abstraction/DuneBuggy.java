@@ -24,7 +24,7 @@ public class DuneBuggy extends Vehicle {
 
 	@Override
 	public void applyBreaks() {
-		boolean a = getIsFlipped();
+		Boolean a = getIsFlipped();
 		if (a = true) {
 			System.out.println("too late for that pal...");
 		} else {
